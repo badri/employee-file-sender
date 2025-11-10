@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Send Messages{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-4xl font-bold">Send WhatsApp Messages</h1>
+
+    <!-- Progress -->
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Sending Progress</h2>
+            <progress class="progress progress-primary w-full" value="0" max="100"></progress>
+            <p class="text-sm text-base-content/70">0 of 0 messages sent</p>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Send Results</h2>
+            <div class="text-center py-8 text-base-content/50">
+                No messages sent yet
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

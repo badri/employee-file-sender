@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Processing History{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-4xl font-bold">Processing History</h1>
+
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <div class="overflow-x-auto">
+                <table class="table table-zebra">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Excel File</th>
+                            <th>Employees</th>
+                            <th>Files Mapped</th>
+                            <th>Messages Sent</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" class="text-center py-8 text-base-content/50">
+                                No processing history yet
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

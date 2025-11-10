@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Files{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-4xl font-bold">Upload Files</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Excel Upload -->
+        <div class="card bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Upload Excel File</h2>
+                <p class="text-sm text-base-content/70">Upload the Excel file containing employee details</p>
+
+                <div class="form-control mt-4">
+                    <input type="file" accept=".xlsx,.xls" class="file-input file-input-bordered w-full" />
+                </div>
+
+                <div class="card-actions justify-end mt-4">
+                    <button class="btn btn-primary">Upload Excel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Files/Folder Upload -->
+        <div class="card bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">Upload Employee Files</h2>
+                <p class="text-sm text-base-content/70">Upload files or select a folder containing employee documents</p>
+
+                <div class="form-control mt-4">
+                    <input type="file" multiple class="file-input file-input-bordered w-full" />
+                </div>
+
+                <div class="card-actions justify-end mt-4">
+                    <button class="btn btn-secondary">Upload Files</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Preview</h2>
+            <div class="text-center py-8 text-base-content/50">
+                No files uploaded yet
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

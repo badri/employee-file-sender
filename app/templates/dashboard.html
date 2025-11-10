@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-4xl font-bold">Dashboard</h1>
+
+    <!-- Stats -->
+    <div class="stats shadow w-full">
+        <div class="stat">
+            <div class="stat-title">Total Employees</div>
+            <div class="stat-value">0</div>
+            <div class="stat-desc">From uploaded Excel files</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">Files Mapped</div>
+            <div class="stat-value">0</div>
+            <div class="stat-desc">Ready to send</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">Messages Sent</div>
+            <div class="stat-value">0</div>
+            <div class="stat-desc">Total sent via WhatsApp</div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Quick Actions</h2>
+            <div class="flex gap-4 mt-4">
+                <a href="{{ url_for('main.upload') }}" class="btn btn-primary">Upload Files</a>
+                <a href="{{ url_for('main.mapping') }}" class="btn btn-secondary">View Mapping</a>
+                <a href="{{ url_for('main.history') }}" class="btn btn-outline">View History</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- License Info -->
+    <div class="alert alert-info">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span>License Status: Active | Expires: N/A</span>
+    </div>
+</div>
+{% endblock %}
